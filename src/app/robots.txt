@@ -21,6 +21,9 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
+User-agent: FacebookBot
+Allow: /
+
 User-agent: LinkedInBot
 Allow: /
 
@@ -55,8 +58,6 @@ Disallow: /
 User-agent: OmgiliBot
 Disallow: /
 
-User-agent: FacebookBot
-Disallow: /
 
 User-agent: Bytespider
 Disallow: /
@@ -70,9 +71,12 @@ Disallow: /
 User-agent: Amazonbot
 Disallow: /
 
-# Disallow all other unspecified crawlers
+# Allow all other unspecified crawlers (like DuckDuckGo, Baidu, etc.)
 User-agent: *
-Disallow: /
+Allow: /
+
+User-agent: bingbot
+Allow: /
 
 # Sitemap location
-Sitemap: https://newinvestgroup.ly/sitemap.xml
+Sitemap: https://sidraeng.ly/sitemap.xml
