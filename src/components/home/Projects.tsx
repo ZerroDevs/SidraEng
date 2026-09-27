@@ -43,7 +43,7 @@ export default function Projects() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 pb-8 md:pb-0 px-4 -mx-4 lg:px-0 lg:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {projects.map((src, index) => (
             <motion.div 
               key={index}
@@ -52,14 +52,14 @@ export default function Projects() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer"
+              className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer min-w-[75%] sm:min-w-[40%] md:min-w-0 snap-center shrink-0"
             >
-              <div className="absolute inset-0 bg-[#0F172A]/40 group-hover:bg-[#D97706]/40 transition-colors duration-300 z-10 opacity-0 group-hover:opacity-100 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-[#0F172A]/40 group-hover:bg-[#D97706]/40 group-active:bg-[#D97706]/40 transition-colors duration-300 z-10 opacity-0 group-hover:opacity-100 group-active:opacity-100 mix-blend-overlay" />
               <Image 
                 src={src}
                 alt={`Project ${index + 1}`}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 group-hover:scale-110 group-active:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
             </motion.div>

@@ -25,8 +25,8 @@ export default function Highlights() {
       />
       <div className="absolute inset-0 bg-sidra-charcoal/70" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x md:rtl:divide-x-reverse divide-border-silver/20 dark:divide-sidra-charcoal-border">
+      <div className="container mx-auto relative z-10">
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-6 md:gap-8 divide-x-0 md:divide-x md:rtl:divide-x-reverse divide-border-silver/20 dark:divide-sidra-charcoal-border px-4 -mx-4 lg:px-0 lg:mx-0 py-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {highlights.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -36,7 +36,7 @@ export default function Highlights() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: item.delay }}
-                className="flex items-center gap-6 pt-8 md:pt-0 first:pt-0 md:px-8"
+                className="flex items-center gap-6 md:px-8 min-w-[85%] sm:min-w-[300px] md:min-w-0 snap-center shrink-0 active:opacity-75 transition-opacity"
               >
                 <div className="w-16 h-16 rounded-full bg-sidra-amber/10 flex items-center justify-center shrink-0">
                   <Icon size={32} className="text-sidra-amber" />

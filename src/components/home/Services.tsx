@@ -52,7 +52,7 @@ export default function Services() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-6 md:gap-8 pb-8 md:pb-0 px-2 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -63,7 +63,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: service.delay }}
                 className={clsx(
-                  "p-10 rounded-2xl flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2",
+                  "p-10 rounded-2xl flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2 min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center shrink-0",
                   service.isHighlight 
                     ? "bg-[#D97706] text-white shadow-xl shadow-[#D97706]/20 scale-105 z-10" 
                     : "bg-gray-50 dark:bg-[#121721] text-[#0F172A] dark:text-white border border-gray-100 dark:border-gray-800 hover:shadow-xl"

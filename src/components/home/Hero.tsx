@@ -52,9 +52,22 @@ export default function Hero() {
         {/* Right Content - Model Image */}
         <div className="w-full lg:w-1/2 relative h-[500px] lg:h-[90vh] flex items-end justify-center lg:justify-end mt-10 lg:mt-0">
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            initial={{ opacity: 0, x: 50, y: 0 }}
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              y: [0, -15, 0]
+            }}
+            transition={{ 
+              opacity: { duration: 1, delay: 0.2 },
+              x: { duration: 1, delay: 0.2, type: "spring", bounce: 0.2 },
+              y: { 
+                duration: 6, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 1.2
+              }
+            }}
             className="relative w-full h-full max-w-lg lg:max-w-none lg:w-full lg:h-[110%] lg:-translate-x-40 rtl:lg:translate-x-40"
           >
             {/* Mobile background (since clip-path is hidden on mobile) */}

@@ -19,12 +19,12 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 pb-8 md:pb-0 px-4 -mx-4 lg:px-0 lg:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {projects.map((img, idx) => (
           <div 
             key={idx} 
             onClick={() => openLightbox(idx)}
-            className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+            className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer min-w-[75%] sm:min-w-[40%] md:min-w-0 snap-center shrink-0"
           >
             <Image
               src={img}
@@ -35,8 +35,8 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
             />
             
             {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-sidra-charcoal/90 via-sidra-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <div className="absolute inset-0 bg-gradient-to-t from-sidra-charcoal/90 via-sidra-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <div className="translate-y-4 group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-300">
                 <span className="inline-block px-3 py-1 bg-sidra-amber text-sidra-white text-xs font-bold rounded-full mb-3">
                   SIDRA
                 </span>

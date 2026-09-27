@@ -64,22 +64,22 @@ export default async function ServicesPage({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-6 md:gap-8 pb-8 md:pb-0 px-4 -mx-4 lg:px-0 lg:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <div key={service.id} className="bg-surface-card rounded-2xl overflow-hidden shadow-lg border border-border-base hover:shadow-2xl hover:border-sidra-amber/30 transition-all duration-300 group">
+              <div key={service.id} className="bg-surface-card rounded-2xl overflow-hidden shadow-lg border border-border-base hover:shadow-2xl hover:border-sidra-amber/30 active:shadow-2xl active:border-sidra-amber/30 transition-all duration-300 group min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center shrink-0">
                 <div className="relative h-64 overflow-hidden">
-                  <div className="absolute inset-0 bg-sidra-charcoal/20 group-hover:bg-transparent transition-colors z-10" />
+                  <div className="absolute inset-0 bg-sidra-charcoal/20 group-hover:bg-transparent group-active:bg-transparent transition-colors z-10" />
                   <Image 
                     src={service.img} 
                     alt={service.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="object-cover group-hover:scale-110 group-active:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   {/* Floating Icon Badge */}
-                  <div className="absolute bottom-4 right-4 rtl:left-4 rtl:right-auto z-20 bg-surface-card p-4 rounded-xl shadow-lg transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute bottom-4 right-4 rtl:left-4 rtl:right-auto z-20 bg-surface-card p-4 rounded-xl shadow-lg transform translate-y-16 group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-300">
                     <Icon size={24} className="text-sidra-amber-hover dark:text-sidra-amber" />
                   </div>
                 </div>

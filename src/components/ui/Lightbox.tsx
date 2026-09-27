@@ -105,24 +105,49 @@ export default function Lightbox({ isOpen, images, initialIndex, onClose }: Ligh
           )}
 
           <div 
-            className="relative w-full max-w-6xl h-[70vh] md:h-[85vh] px-4 md:px-20 flex flex-col items-center justify-center"
+            className="relative w-full max-w-6xl h-[70vh] md:h-[85vh] px-4 md:px-20 flex flex-col items-center justify-center overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
-              className="relative w-full h-full"
-            >
-              <Image
-                src={images[currentIndex]}
-                alt={`Project Image ${currentIndex + 1}`}
-                fill
-                className="object-contain"
-                priority
-              />
-            </motion.div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, scale: 0.95, x: 20 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.95, x: -20 }}
+                transition={{ duration: 0.2 }}
+                className="relative w-full h-full cursor-grab active:cursor-grabbing"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.8}
+                onDragEnd={(e, { offset }) => {
+                  const swipe = offset.x;
+                  if (Math.abs(swipe) > 50) {
+                    const isRTL = document.documentElement.dir === 'rtl';
+                    if (swipe < 0) {
+                      if (isRTL) {
+                        handlePrev();
+                      } else {
+                        handleNext();
+                      }
+                    } else {
+                      if (isRTL) {
+                        handleNext();
+                      } else {
+                        handlePrev();
+                      }
+                    }
+                  }
+                }}
+              >
+                <Image
+                  src={images[currentIndex]}
+                  alt={`Project Image ${currentIndex + 1}`}
+                  fill
+                  className="object-contain pointer-events-none"
+                  priority
+                />
+              </motion.div>
+            </AnimatePresence>
             <div className="absolute bottom-[-40px] md:bottom-2 left-0 right-0 text-center text-white/70 font-medium">
               {currentIndex + 1} / {images.length}
             </div>
