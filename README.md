@@ -1,55 +1,104 @@
-# New Investors | المستثمرون الجدد
+# SIDRA Engineering & Construction
 
-![New Investors Logo](./public/assets/images/Logo-bg.jpeg)
+**SIDRA Engineering & Construction Company (شركة سدرة للهندسة والمقاولات)** is a modern, responsive, and bilingual corporate web platform built to showcase civil construction, infrastructure works, and project management services.
 
-**New Investors (المستثمرون الجدد)** is a premium, localized real estate investment and development platform built for the Libyan market. It showcases high-value commercial and residential real estate development projects, providing a stunning user experience optimized for both Arabic (RTL) and English (LTR) readers.
+The platform provides a premium and industrial aesthetic tailored for construction companies, featuring dark/light modes, seamless English/Arabic localization with automatic LTR/RTL support, and high-performance interactive interfaces.
 
-## 🚀 Technology Stack
+## 🚀 Tech Stack
 
-This platform is built using modern, bleeding-edge web technologies to ensure maximum performance, incredible SEO, and a premium UX.
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, React 19, TypeScript)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) (Utility-first, CSS Variables)
+- **Internationalization:** `next-intl`
+- **Theming:** `next-themes` (Dark / Light mode)
+- **Icons:** `lucide-react`
+- **Animations:** Tailwind CSS transitions & transforms
 
-- **Framework**: [Next.js 15+](https://nextjs.org/) (React Server Components, App Router)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Internationalization (i18n)**: [next-intl](https://next-intl-docs.vercel.app/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Theming**: `next-themes` (Dark/Light mode)
-- **Typography**: Optimized Google Fonts (Plus Jakarta Sans, Outfit, Alexandria, Geist Mono)
+## ✨ Key Features
 
-## ✨ Core Features
+- **Bilingual & Bidirectional (i18n):** Native support for English (LTR) and Arabic (RTL). Text direction and layout seamlessly adapt based on the selected language.
+- **Dynamic Theming:** Built-in Light and Dark themes, defaulting to a crisp corporate light mode with an optional deep steel charcoal dark mode.
+- **Responsive Architecture:** Fully fluid layout adapting beautifully to mobile, tablet, and desktop viewports.
+- **High-Impact Sections:**
+  - **Hero:** Split layout with bold typography, brand-accented backdrops, and interactive CTA.
+  - **Highlights:** Quick preview cards emphasizing Quality, Equipment, and Safety (HSE).
+  - **Core Services:** Distinctly elevated cards detailing Civil Construction, Road & Infrastructure, and Project Management.
+  - **Execution Methodology:** Step-by-step interactive workflow.
+  - **Projects Showcase:** Responsive grid galleries for construction works.
+  - **Cost Estimation & Inquiry:** Integrated contact and quote request form with accessible validation.
 
-- **True Bi-directional UI**: Flawless switching between Arabic (Right-to-Left) and English (Left-to-Right).
-- **Cinematic Dark Mode**: Integrated deep navy and gold branding dynamically linked to user preference.
-- **Micro-interactions**: Hardware-accelerated hover effects, interactive cards, and page transition skeletons.
-- **SEO Optimized**: Dynamic OpenGraph images, Metadata generation, automated sitemap.xml, and strictly governed robots.txt policies blocking AI scrapers.
-- **Dynamic Contact Hub**: Integrated `mailto:` APIs formatting complex leads natively into the user's email client.
+## 🎨 Brand Guidelines & Color Palette
 
-## 🛠️ Local Development
+- **Industrial Orange / Amber (Primary):**
+  - Light mode: `#D97706` / `#E58A1F`
+  - Dark mode: `#F59E0B`
+- **Steel Charcoal / Navy (Neutral & Structure):**
+  - Dark background / panels: `#0F172A` / `#111827` / `#161F30`
+- **Typography:**
+  - English (LTR): `GeistSans` or `Inter`
+  - Arabic (RTL): `Cairo` or `IBM Plex Sans Arabic`
 
-To run this project locally on your machine:
+## 📂 Directory Structure
 
-1. **Clone the repository** (Requires access rights)
-2. **Install Dependencies**
+```text
+SidraEng/
+├── messages/               # i18n Translation dictionaries
+│   ├── en.json             # English translations
+│   └── ar.json             # Arabic translations
+├── public/                 # Static assets (images, icons)
+├── src/
+│   ├── app/
+│   │   └── [locale]/       # Localized pages (home, about, services, etc.)
+│   ├── components/         # Reusable UI components
+│   ├── i18n/               # next-intl configuration & routing
+│   └── lib/                # Utilities and helpers
+├── middleware.ts           # Intercepts requests for locale handling
+├── tailwind.config.ts      # Tailwind CSS configuration
+└── tsconfig.json           # TypeScript configuration
+```
+
+## 🛠️ Getting Started
+
+First, make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+1. **Install dependencies:**
    ```bash
    npm install
+   # or
+   yarn install
+   # or
+   pnpm install
    ```
-3. **Run the Development Server**
+
+2. **Run the development server:**
    ```bash
    npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
    ```
-4. **Access the application**
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📁 Architecture Overview
+3. **Open the application:**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser. The default locale is English (`/en`). You can switch to Arabic by navigating to `/ar` or using the built-in language switcher.
 
-- `/src/app/[locale]/`: Contains all page routes configured for internationalization.
-- `/src/components/`: Reusable, modular UI blocks (Header, Hero, Sectors, Footer, ContactForm).
-- `/messages/`: Contains `en.json` and `ar.json` dictionary files acting as the single source of truth for all text in the app.
-- `/public/`: Hosts static assets, brand logos, imagery, and the SEO XML files.
+## 🌍 Translation Workflow (next-intl)
 
-## ⚖️ Legal & Licensing
+All textual content is strictly extracted from `messages/en.json` and `messages/ar.json`.
+Do not hardcode display strings directly into `.tsx` files.
 
-This software is strictly proprietary. Unauthorized copying of this repository, via any medium, is strictly prohibited. See the `LICENSE` file for more details.
+1. Add your new key-value pair to `messages/en.json`.
+2. Provide the corresponding translation with the exact same key structure in `messages/ar.json`.
+3. Use the `useTranslations` hook in your components:
 
-**Developed by**: ZeroNux Studio  
-**Domain**: [https://newinvestgroup.ly](https://newinvestgroup.ly)
+```tsx
+import { useTranslations } from 'next-intl';
+
+export default function MyComponent() {
+  const t = useTranslations('MyNamespace');
+  return <h1>{t('title')}</h1>;
+}
+```
+
+## 📄 License
+
+This project is proprietary and confidential. Unauthorized copying, modifying, merging, publishing, distributing, or use of this source code is strictly prohibited.
