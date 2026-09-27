@@ -1,8 +1,10 @@
 import {setRequestLocale} from 'next-intl/server';
 import Hero from '@/components/home/Hero';
-import Sectors from '@/components/home/Sectors';
-import VisionMission from '@/components/home/VisionMission';
-import CoreValues from '@/components/home/CoreValues';
+import Highlights from '@/components/home/Highlights';
+import Services from '@/components/home/Services';
+import Workflow from '@/components/home/Workflow';
+import Projects from '@/components/home/Projects';
+import Quote from '@/components/home/Quote';
 
 export default async function HomePage({
   params
@@ -15,9 +17,11 @@ export default async function HomePage({
   return (
     <div className="flex flex-col w-full">
       <Hero />
-      <Sectors />
-      <VisionMission />
-      <CoreValues />
+      <Highlights />
+      <Services />
+      <Workflow />
+      <Projects />
+      <Quote />
     </div>
   );
 }

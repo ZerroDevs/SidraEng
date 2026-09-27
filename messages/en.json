@@ -2,68 +2,128 @@
   "Navigation": {
     "home": "Home",
     "about": "About Us",
-    "contact": "Contact Us"
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "freeConsultation": "Free Consultation"
   },
   "Common": {
-    "brandName": "New Investors",
+    "brandName": "SIDRA Engineering & Construction Company",
     "readMore": "Read More",
     "send": "Send Message",
     "quickLinks": "Quick Links",
-    "contactWithUs": "Contact With Us",
+    "contactWithUs": "Contact Us",
     "developedBy": "Developed by",
-    "allRightsReserved": "All Rights Reserved."
+    "allRightsReserved": "All Rights Reserved.",
+    "callUs": "Call Us"
+  },
+  "Header": {
+    "location": "Ain Zara - Tripoli, Libya"
   },
   "Hero": {
-    "title": "New Investors",
-    "subtitle": "The Source of Real Estate Investment and Development in Libya"
+    "title": "Engineering the Future of Libya",
+    "subtitle": "SIDRA Engineering & Construction Company delivers excellence in every project, setting new standards in quality and safety.",
+    "startProject": "Start New Project",
+    "watchVideo": "Watch Video"
   },
-  "Sectors": {
-    "title": "Why New Investors?",
-    "description": "New Investors is a Libyan company operating in real estate development and investment, focusing on developing qualitative real estate assets in strategic urban locations inside Libya. The company adopts a conservative business model based on market analysis, independent feasibility studies, risk management, and building partnerships with specialized consultants, with the aim of developing bankable and long-term value assets.",
-    "subDescription": "We work with dedication and seriousness in the following real estate development sectors:",
-    "commercial": "Commercial Sector",
-    "hospitality": "Residential Sector"
+  "Highlights": {
+    "precision": "Engineering Precision",
+    "machinery": "Heavy Machinery Fleet",
+    "hse": "HSE Standards"
   },
-  "VisionMission": {
-    "visionTitle": "Our Vision",
-    "visionDesc": "To be at the forefront of leading local companies in real estate investment and development, by providing real estate solutions that meet all stakeholder needs.",
-    "missionTitle": "Our Mission",
-    "missionDesc": "We always strive to meet the needs of stakeholders in the real estate investment and development sector, relying on the quality of services provided, speed of completion, and competitive prices.",
-    "messageTitle": "Our Message",
-    "messageDesc": "Providing creative real estate services and solutions, with thoughtful plans based on the study and analysis of the real estate market that meet all needs, at the highest level of creativity and professionalism."
+  "Services": {
+    "title": "Core Services",
+    "civil": "Civil & Structural Construction",
+    "road": "Road & Infrastructure Engineering",
+    "management": "Project Management & Supervision"
   },
-  "CoreValues": {
-    "title": "Our Values",
-    "description": "Quality, Professionalism, Creativity, Transparency, Credibility, Integrity are our values that we strive to apply and always adhere to in all our services. They are our guide and manual in dealing with clients; aiming to provide a service that leaves a strong imprint and impact, always earning our clients' satisfaction.",
-    "quality": "Quality",
-    "professionalism": "Professionalism",
-    "creativity": "Creativity",
-    "transparency": "Transparency",
-    "credibility": "Credibility",
-    "integrity": "Integrity"
+  "Workflow": {
+    "title": "How We Build",
+    "step1": "Blueprint & Tenders",
+    "step2": "Site Execution & Handover"
   },
-  "Contact": {
-    "title": "Contact Us",
-    "description": "At New Investors, we value every inquiry and collaboration opportunity, as our team is always ready to assist you in all real estate development, investment, or real estate consulting needs. Whether you are an investor, client, or partner, we are here to provide professional and prompt support — do not hesitate to contact us at any time.",
-    "locationLabel": "Location",
-    "locationValue": "AinZara - Tripoli / Libya",
-    "phoneLabel": "Call Us",
-    "emailLabel": "Email",
+  "Projects": {
+    "title": "Projects Showcase"
+  },
+  "Quote": {
+    "title": "Request a Quote",
+    "assurance": "We assure you of the highest quality standards.",
     "formName": "Name",
     "formEmail": "Email",
-    "formPhone": "Phone",
+    "formService": "Select Service",
     "formSubject": "Subject",
     "formMessage": "Message",
-    "formNamePlaceholder": "e.g. John Doe",
-    "formEmailPlaceholder": "e.g. email@example.com",
-    "formPhonePlaceholder": "e.g. +218 92 000 0000",
-    "formSubjectPlaceholder": "How can we help you?",
-    "formMessagePlaceholder": "Write your message here...",
-    "formAgreeCheck": "I agree to the privacy policy and terms of service."
+    "formSubmit": "Submit Inquiry",
+    "agreeTerms": "I agree to the processing of my personal data according to the"
+  },
+  "Footer": {
+    "bio": "SIDRA Engineering & Construction Company is dedicated to building sustainable and high-quality infrastructures.",
+    "officeLocation": "Office Location"
   },
   "NotFound": {
     "title": "404 - Page Not Found",
     "description": "Sorry, the page you are looking for does not exist or has been moved.",
     "backHome": "Back to Home"
+  },
+  "Contact": {
+    "title": "Contact Information",
+    "description": "Get in touch with SIDRA Engineering & Construction Company. We are ready to discuss your projects and offer the best solutions.",
+    "locationLabel": "Our Address",
+    "locationValue": "Ain Zara - Tripoli, Libya",
+    "emailLabel": "Email Address",
+    "phoneLabel": "Phone Numbers",
+    "formName": "Full Name",
+    "formNamePlaceholder": "John Doe",
+    "formEmail": "Email Address",
+    "formEmailPlaceholder": "john@example.com",
+    "formPhone": "Phone Number",
+    "formPhonePlaceholder": "+218 XX XXX XXXX",
+    "formSubject": "Subject",
+    "formSubjectPlaceholder": "Project Inquiry",
+    "formMessage": "Your Message",
+    "formMessagePlaceholder": "How can we help you?",
+    "formAgreeCheck": "I agree to the processing of my data."
+  },
+  "AboutPage": {
+    "title": "About SIDRA Engineering",
+    "description": "We are a leading engineering and construction company in Libya, committed to delivering excellence in every project we undertake.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "To provide high-quality construction services safely, sustainably, and with utmost dedication.",
+    "visionTitle": "Our Vision",
+    "visionDesc": "To be the preferred contractor of choice in the region, recognized for our reliability and innovation.",
+    "valuesTitle": "Core Values",
+    "valuesDesc": "Integrity, Quality, Safety, and Innovation form the foundation of our work."
+  },
+  "ServicesPage": {
+    "title": "Our Professional Services",
+    "description": "Comprehensive engineering solutions tailored to your infrastructure needs.",
+    "service1Title": "Civil & Structural Construction",
+    "service1Desc": "Building robust and modern structures from residential to commercial scale.",
+    "service2Title": "Road & Infrastructure Engineering",
+    "service2Desc": "Developing sustainable road networks and robust utility infrastructures.",
+    "service3Title": "Project Management & Supervision",
+    "service3Desc": "Ensuring projects are delivered on time, within budget, and to the highest standards."
+  },
+  "ProjectsPage": {
+    "title": "Our Portfolio",
+    "description": "Explore a selection of our successful engineering and construction projects across Libya."
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "description": "At SIDRA Engineering & Construction Company, we respect your privacy and are committed to protecting the personal data you share with us. This Privacy Policy outlines how we collect, use, and safeguard your information.",
+    "section1Title": "1. Information We Collect",
+    "section1Desc": "When you contact us, request a quote, or use our services, we may collect personal information such as your name, email address, phone number, and details regarding your project inquiry.",
+    "section2Title": "2. How We Use Your Information",
+    "section2Desc": "We use the information collected to:",
+    "section2List1": "Respond to your inquiries and provide accurate quotes.",
+    "section2List2": "Communicate with you regarding ongoing or future projects.",
+    "section2List3": "Improve our services and website experience.",
+    "section3Title": "3. Data Security",
+    "section3Desc": "We implement appropriate technical and organizational measures to ensure that your personal data is kept secure and protected against unauthorized access, loss, or alteration.",
+    "section4Title": "4. Sharing of Information",
+    "section4Desc": "We do not sell, trade, or otherwise transfer your personal information to outside parties except when necessary to fulfill your request (e.g., subcontractors, legally required disclosures).",
+    "section5Title": "5. Contact Us",
+    "section5Desc": "If you have any questions regarding this Privacy Policy or how we handle your data, please contact us at",
+    "privacyPolicyLabel": "Privacy Policy"
   }
 }

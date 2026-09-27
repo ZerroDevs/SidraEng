@@ -1,0 +1,101 @@
+import {setRequestLocale, getTranslations} from 'next-intl/server';
+import Image from 'next/image';
+import { Building2, Pickaxe, BookOpenCheck } from 'lucide-react';
+
+export default async function ServicesPage({
+  params
+}: {
+  params: Promise<{locale: string}>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const tNav = await getTranslations('Navigation');
+  const t = await getTranslations('ServicesPage');
+  
+  const services = [
+    {
+      id: 1,
+      title: t('service1Title'),
+      desc: t('service1Desc'),
+      icon: Building2,
+      img: "/assets/Works/portfolio2-1.jpg"
+    },
+    {
+      id: 2,
+      title: t('service2Title'),
+      desc: t('service2Desc'),
+      icon: Pickaxe,
+      img: "/assets/Works/portfolio6-1.jpg"
+    },
+    {
+      id: 3,
+      title: t('service3Title'),
+      desc: t('service3Desc'),
+      icon: BookOpenCheck,
+      img: "/assets/images/tabahee/portfolio3-1-600x600.jpg"
+    }
+  ];
+
+  return (
+    <div className="flex flex-col w-full min-h-screen bg-background-subtle dark:bg-background">
+      {/* Page Header */}
+      <div className="pt-32 pb-20 bg-sidra-charcoal text-center relative overflow-hidden">
+        <Image 
+          src="/assets/banner/image.png"
+          alt="Banner"
+          fill
+          priority
+          className="object-cover opacity-50 dark:opacity-40"
+        />
+        <div className="absolute inset-0 bg-sidra-charcoal/50 dark:bg-sidra-charcoal/70" />
+        <div className="absolute inset-0 bg-sidra-amber/5 pointer-events-none" />
+        <h1 className="text-4xl md:text-5xl font-black text-sidra-white relative z-10">{tNav('services')}</h1>
+        <div className="w-24 h-1 bg-sidra-amber mx-auto mt-6 rounded-full relative z-10" />
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 lg:px-8 py-20">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl lg:text-4xl font-black text-content-primary mb-6">
+            {t('title')}
+          </h2>
+          <p className="text-lg text-content-secondary leading-relaxed">
+            {t('description')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div key={service.id} className="bg-surface-card rounded-2xl overflow-hidden shadow-lg border border-border-base hover:shadow-2xl hover:border-sidra-amber/30 transition-all duration-300 group">
+                <div className="relative h-64 overflow-hidden">
+                  <div className="absolute inset-0 bg-sidra-charcoal/20 group-hover:bg-transparent transition-colors z-10" />
+                  <Image 
+                    src={service.img} 
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  {/* Floating Icon Badge */}
+                  <div className="absolute bottom-4 right-4 rtl:left-4 rtl:right-auto z-20 bg-surface-card p-4 rounded-xl shadow-lg transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
+                    <Icon size={24} className="text-sidra-amber-hover dark:text-sidra-amber" />
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-content-primary mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-content-secondary leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}

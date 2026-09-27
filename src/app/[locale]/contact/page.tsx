@@ -1,6 +1,7 @@
 import {setRequestLocale, getTranslations} from 'next-intl/server';
+import Image from 'next/image';
 import { MapPin, Mail, Phone } from 'lucide-react';
-import Hero from '@/components/home/Hero';
+
 import ContactForm from '@/components/contact/ContactForm';
 import AnimatedCompass from '@/components/contact/AnimatedCompass';
 
@@ -14,10 +15,24 @@ export default async function ContactPage({
   const t = await getTranslations('Contact');
   const tNav = await getTranslations('Navigation');
   const tCommon = await getTranslations('Common');
+  const tQuote = await getTranslations('Quote');
+  const tPrivacy = await getTranslations('Privacy');
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#F8F9FA] dark:bg-[#0B132B]">
-      <Hero title={tNav('contact')} height="half" />
+      <div className="pt-32 pb-20 bg-sidra-charcoal text-center relative overflow-hidden">
+        <Image 
+          src="/assets/banner/image.png"
+          alt="Banner"
+          fill
+          priority
+          className="object-cover opacity-50 dark:opacity-40"
+        />
+        <div className="absolute inset-0 bg-sidra-charcoal/50 dark:bg-sidra-charcoal/70" />
+        <div className="absolute inset-0 bg-sidra-amber/5 pointer-events-none" />
+        <h1 className="text-4xl md:text-5xl font-black text-sidra-white relative z-10">{tNav('contact')}</h1>
+        <div className="w-24 h-1 bg-sidra-amber mx-auto mt-6 rounded-full relative z-10" />
+      </div>
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -29,16 +44,16 @@ export default async function ContactPage({
         <div className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
           
           {/* Contact Info (Left) */}
-          <div className="w-full lg:w-1/3 bg-[#0F2847] text-white p-10 flex flex-col relative overflow-hidden">
+          <div className="w-full lg:w-1/3 bg-[#0F172A] text-white p-10 flex flex-col relative overflow-hidden">
             <AnimatedCompass />
             
             <div className="relative z-10">
-              <h2 className="text-2xl font-bold text-[#C5A869] mb-8">{t('title')}</h2>
+              <h2 className="text-2xl font-bold text-[#D97706] mb-8">{t('title')}</h2>
             </div>
             
             <div className="space-y-8 flex-1 relative z-10">
               <div className="flex items-start gap-4">
-                <div className="bg-white/10 p-3 rounded-full text-[#C5A869] shrink-0">
+                <div className="bg-white/10 p-3 rounded-full text-[#D97706] shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -48,19 +63,19 @@ export default async function ContactPage({
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="bg-white/10 p-3 rounded-full text-[#C5A869] shrink-0">
+                <div className="bg-white/10 p-3 rounded-full text-[#D97706] shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
                   <h3 className="text-gray-400 text-sm mb-1">{t('emailLabel')}</h3>
-                  <a href="mailto:info@newinvestgroup.ly" className="font-medium hover:text-[#C5A869] transition-colors" dir="ltr">
-                    info@newinvestgroup.ly
+                  <a href="mailto:info@sidraeng.ly" className="font-medium hover:text-[#D97706] transition-colors" dir="ltr">
+                    info@sidraeng.ly
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-white/10 p-3 rounded-full text-[#C5A869] shrink-0">
+                <div className="bg-white/10 p-3 rounded-full text-[#D97706] shrink-0">
                   <Phone size={24} />
                 </div>
                 <div className="w-full">
@@ -94,8 +109,8 @@ export default async function ContactPage({
           </div>
 
           {/* Contact Form (Right) */}
-          <div className="w-full lg:w-2/3 p-10 lg:p-16 bg-white dark:bg-[#1C2541] transition-colors">
-            <h2 className="text-2xl font-bold text-[#0F2847] dark:text-white mb-8">{tCommon('contactWithUs')}</h2>
+          <div className="w-full lg:w-2/3 p-10 lg:p-16 bg-white dark:bg-[#0B0F17] transition-colors">
+            <h2 className="text-2xl font-bold text-[#0F172A] dark:text-white mb-8">{tCommon('contactWithUs')}</h2>
             <ContactForm tDict={{
               formName: t('formName'),
               formEmail: t('formEmail'),
@@ -108,6 +123,8 @@ export default async function ContactPage({
               formSubjectPlaceholder: t('formSubjectPlaceholder'),
               formMessagePlaceholder: t('formMessagePlaceholder'),
               formAgreeCheck: t('formAgreeCheck'),
+              privacyPolicyLabel: tPrivacy('privacyPolicyLabel'),
+              formService: tQuote('formService'),
               send: tCommon('send')
             }} />
           </div>

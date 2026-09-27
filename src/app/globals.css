@@ -1,14 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0F2847;
-  --color-accent: #C5A869;
-  --color-surface-light: #F8F9FA;
-  --color-surface-dark: #0B132B;
-  --color-card-light: #FFFFFF;
-  --color-card-dark: #1C2541;
-  --color-border-light: #E2E8F0;
-  --color-border-dark: #2A3A5E;
+  --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
+  
+  --color-surface-card: var(--surface-card);
+  --color-surface-elevated: var(--surface-elevated);
+  
+  --color-content-primary: var(--text-primary);
+  --color-content-secondary: var(--text-secondary);
+  --color-content-muted: var(--text-muted);
+  
+  --color-border-base: var(--border-base);
+  --color-border-silver: var(--border-silver);
+  
+  --color-sidra-amber: var(--sidra-amber);
+  --color-sidra-amber-hover: var(--sidra-amber-hover);
+  --color-sidra-amber-soft: var(--sidra-amber-soft);
+  
+  --color-sidra-charcoal: var(--sidra-charcoal);
+  --color-sidra-charcoal-deep: var(--sidra-charcoal-deep);
+  --color-sidra-charcoal-border: var(--sidra-charcoal-border);
+  
+  --color-sidra-silver-base: #CBD5E1;
+  --color-sidra-silver-light: #F1F5F9;
+  --color-sidra-silver-dark: #94A3B8;
+  
+  --color-sidra-whatsapp: var(--sidra-whatsapp);
+  --color-sidra-white: var(--sidra-white);
+
   --font-sans: var(--font-sans), sans-serif;
   --font-heading: var(--font-heading), sans-serif;
   --font-arabic: var(--font-arabic), sans-serif;
@@ -19,22 +39,70 @@
 
 @layer base {
   :root {
-    --bg-surface: var(--color-surface-light);
-    --bg-card: var(--color-card-light);
-    --border-subtle: var(--color-border-light);
-    --text-main: var(--color-primary);
+    /* Base Surfaces */
+    --background: #FFFFFF;
+    --background-subtle: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --surface-elevated: #F1F5F9;
+
+    /* Text Hierarchy */
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+
+    /* Borders */
+    --border-base: #E2E8F0;
+    --border-silver: #CBD5E1;
+
+    /* Primary Industrial Amber */
+    --sidra-amber: #E58A1F;
+    --sidra-amber-hover: #D97706;
+    --sidra-amber-soft: #FEF3C7;
+
+    /* Steel Charcoal & Midnight Slate */
+    --sidra-charcoal: #0F172A;
+    --sidra-charcoal-deep: #121721;
+    --sidra-charcoal-border: #1E293B;
+
+    /* Utility */
+    --sidra-whatsapp: #25D366;
+    --sidra-white: #FFFFFF;
   }
   
   .dark {
-    --bg-surface: var(--color-surface-dark);
-    --bg-card: var(--color-card-dark);
-    --border-subtle: var(--color-border-dark);
-    --text-main: #FFFFFF;
+    /* Base Surfaces */
+    --background: #0A0E17;
+    --background-subtle: #0F172A;
+    --surface-card: #121721;
+    --surface-elevated: #1E293B;
+
+    /* Text Hierarchy */
+    --text-primary: #FFFFFF;
+    --text-secondary: #CBD5E1;
+    --text-muted: #64748B;
+
+    /* Borders */
+    --border-base: #1E293B;
+    --border-silver: #334155;
+
+    /* Primary Industrial Amber */
+    --sidra-amber: #F59E0B;
+    --sidra-amber-hover: #D97706;
+    --sidra-amber-soft: rgba(245, 158, 11, 0.15);
+
+    /* Steel Charcoal & Midnight Slate */
+    --sidra-charcoal: #070A0F;
+    --sidra-charcoal-deep: #030712;
+    --sidra-charcoal-border: #1E293B;
+
+    /* Utility */
+    --sidra-whatsapp: #25D366;
+    --sidra-white: #FFFFFF;
   }
 
   body {
-    background-color: var(--bg-surface);
-    color: var(--text-main);
+    background-color: var(--background);
+    color: var(--text-primary);
   }
 
   /* Apply Outfit font to all headings specifically for English (LTR) */

@@ -35,23 +35,23 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
   const { locale } = await params;
   const isAr = locale === 'ar';
   
-  const title = isAr ? 'المستثمرون الجدد | التطوير والاستثمار العقاري' : 'New Investors | Real Estate Development';
+  const title = isAr ? 'شركة سدرة للهندسة والمقاولات' : 'SIDRA Engineering & Construction Company';
   const description = isAr 
-    ? 'شركة ليبية تعمل في مجال التطوير والاستثمار العقاري، وتركز على تطوير أصول عقارية نوعية.' 
-    : 'New Investors is a Libyan company operating in real estate development and investment.';
+    ? 'شركة سدرة للهندسة والمقاولات تقدم التميز في كل مشروع، وتضع معايير جديدة في الجودة والسلامة.' 
+    : 'SIDRA Engineering & Construction Company delivers excellence in every project, setting new standards in quality and safety.';
     
   return {
     title,
     description,
-    metadataBase: new URL('https://newinvestgroup.ly'),
+    metadataBase: new URL('https://sidraeng.ly'),
     openGraph: {
       title,
       description,
-      url: `https://newinvestgroup.ly/${locale}`,
-      siteName: isAr ? 'المستثمرون الجدد' : 'New Investors',
+      url: `https://sidraeng.ly/${locale}`,
+      siteName: isAr ? 'سدرة للهندسة' : 'SIDRA Engineering',
       images: [
         {
-          url: '/assets/real-estate/dat2.jpg',
+          url: '/assets/images/logo-bg.jpeg',
           width: 1200,
           height: 630,
           alt: title,
@@ -64,10 +64,11 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
       card: 'summary_large_image',
       title,
       description,
-      images: ['/assets/real-estate/dat2.jpg'],
+      images: ['/assets/images/logo-bg.jpeg'],
     },
     icons: {
-      apple: '/assets/images/Logo-bg.jpeg',
+      apple: '/assets/images/logo-bg.ico',
+      icon: '/assets/images/logo-bg.ico',
     },
   };
 }
