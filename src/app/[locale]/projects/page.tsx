@@ -12,18 +12,6 @@ export default async function ProjectsPage({
   const tNav = await getTranslations('Navigation');
   const t = await getTranslations('ProjectsPage');
   
-  const projects = [
-    "/assets/Works/portfolio2-1.jpg",
-    "/assets/Works/portfolio6-1.jpg",
-    "/assets/Works/portfolio7-1.jpg",
-    "/assets/Works/portfolio9-1.jpg",
-    "/assets/Works/portfolio10-1.jpg",
-    "/assets/Works/personal_gift-1.jpg",
-    "/assets/images/tabahee/portfolio3-1-600x600.jpg",
-    "/assets/images/tabahee/tick_tock-1-1-600x600.jpg",
-    "/assets/Works/portfolio7-1.jpg" // Using one duplicate to make it a nice 9 grid, or 8 works too. Let's stick to 8.
-  ];
-
   return (
     <div className="flex flex-col w-full min-h-screen bg-background">
       {/* Page Header */}
@@ -52,7 +40,7 @@ export default async function ProjectsPage({
           </p>
         </div>
 
-        <ProjectsGallery projects={projects.slice(0, 8)} />
+        <ProjectsGallery />
       </div>
     </div>
   );

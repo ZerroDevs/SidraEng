@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-[#F8FAFC] dark:bg-[#0B0F17] overflow-hidden pt-20 lg:pt-0">
       {/* Light/Pale Geometric Backdrop (Behind) */}
-      <div className="absolute top-0 right-0 w-full lg:w-[60%] h-full bg-[#E58A1F]/20 dark:bg-[#E58A1F]/10 clip-path-hero-light rtl:clip-path-hero-light-rtl z-0 hidden lg:block" />
+      <div className="absolute top-0 right-0 rtl:left-0 rtl:right-auto w-full lg:w-[60%] h-full bg-[#E58A1F]/20 dark:bg-[#E58A1F]/10 clip-path-hero-light z-0 hidden lg:block" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center h-full">
         
@@ -78,7 +78,7 @@ export default function Hero() {
               alt="Engineering Professional"
               fill
               priority
-              className="object-contain object-bottom z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.35)]"
+              className="object-contain object-bottom z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.35)] rtl:scale-x-[-1]"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>
@@ -87,26 +87,20 @@ export default function Hero() {
       </div>
       
       {/* Amber Geometric Backdrop (Front) - Layered OVER the model's shoulder */}
-      <div className="absolute top-0 right-0 w-full lg:w-[32%] h-full bg-[#ECA13A] dark:bg-[#D97706] clip-path-hero-main rtl:clip-path-hero-main-rtl z-20 pointer-events-none hidden lg:block" />
+      <div className="absolute top-0 right-0 rtl:left-0 rtl:right-auto w-full lg:w-[32%] h-full bg-[#ECA13A] dark:bg-[#D97706] clip-path-hero-main z-20 pointer-events-none hidden lg:block" />
 
       <style jsx global>{`
         .clip-path-hero-light {
           clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
         }
-        .clip-path-hero-light-rtl {
+        [dir="rtl"] .clip-path-hero-light {
           clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
         }
         .clip-path-hero-main {
           clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
         }
-        .clip-path-hero-main-rtl {
+        [dir="rtl"] .clip-path-hero-main {
           clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
-        }
-        [dir="rtl"] .clip-path-hero-light, [dir="rtl"] .clip-path-hero-main {
-          display: none;
-        }
-        [dir="ltr"] .clip-path-hero-light-rtl, [dir="ltr"] .clip-path-hero-main-rtl {
-          display: none;
         }
       `}</style>
     </section>

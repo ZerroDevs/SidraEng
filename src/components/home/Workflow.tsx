@@ -9,7 +9,8 @@ export default function Workflow() {
 
   const steps = [
     { num: '01', title: t('step1') },
-    { num: '02', title: t('step2') }
+    { num: '02', title: t('step2') },
+    { num: '03', title: t('step3') }
   ];
 
   return (

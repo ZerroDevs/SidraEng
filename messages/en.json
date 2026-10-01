@@ -39,11 +39,60 @@
   },
   "Workflow": {
     "title": "How We Build",
-    "step1": "Blueprint & Tenders",
-    "step2": "Site Execution & Handover"
+    "step1": "Planning and Study",
+    "step2": "Construction and Execution",
+    "step3": "Finishing and Handover"
   },
   "Projects": {
-    "title": "Projects Showcase"
+    "title": "Projects Showcase",
+    "viewAllProjects": "All Projects",
+    "viewAllServices": "All Services",
+    "items": [
+      {
+        "title": "Design and Implementation of 1000 Housing Units - 2007",
+        "icon": "Building2"
+      },
+      {
+        "title": "Infrastructure",
+        "icon": "HardHat"
+      },
+      {
+        "title": "Water Tanks 27,000 Cubic Meters",
+        "icon": "Droplet"
+      },
+      {
+        "title": "Tripoli International Airport Runway - 2003",
+        "icon": "PlaneTakeoff"
+      },
+      {
+        "title": "Al-Washka Compressed Gas Pipeline Stations - 2008",
+        "icon": "Flame"
+      },
+      {
+        "title": "Extension of 400 kV Power Line at Amal Field - 2005",
+        "icon": "Zap"
+      },
+      {
+        "title": "Rehabilitation of Al-Samah Field Airport - 2023",
+        "icon": "Plane"
+      },
+      {
+        "title": "Design and Study of the Commercial and Administrative Complex Project in Ain Zara",
+        "icon": "Building"
+      },
+      {
+        "title": "Supply and Installation of Pumping System for Man-Made River Water Distribution in Garabulli - 2002",
+        "icon": "Droplets"
+      },
+      {
+        "title": "Rehabilitation of Al-Wafa Field Airport Runway in Ghadames",
+        "icon": "PlaneLanding"
+      },
+      {
+        "title": "Rehabilitation of El Sharara Field Airport - 2001",
+        "icon": "Plane"
+      }
+    ]
   },
   "Quote": {
     "title": "Request a Quote",
@@ -97,12 +146,52 @@
   "ServicesPage": {
     "title": "Our Professional Services",
     "description": "Comprehensive engineering solutions tailored to your infrastructure needs.",
-    "service1Title": "Civil & Structural Construction",
-    "service1Desc": "Building robust and modern structures from residential to commercial scale.",
-    "service2Title": "Road & Infrastructure Engineering",
-    "service2Desc": "Developing sustainable road networks and robust utility infrastructures.",
-    "service3Title": "Project Management & Supervision",
-    "service3Desc": "Ensuring projects are delivered on time, within budget, and to the highest standards."
+    "items": [
+      {
+        "title": "Study and Engineering Works",
+        "desc": "Providing integrated engineering studies and designs for all types of construction and infrastructure projects."
+      },
+      {
+        "title": "Geotechnical Tests",
+        "desc": "Conducting precise soil and foundation tests to ensure the safety and stability of structures."
+      },
+      {
+        "title": "Concrete Works",
+        "desc": "Executing all types of high-quality concrete works using the latest technologies."
+      },
+      {
+        "title": "Dams",
+        "desc": "Design, construction, and maintenance of dams and water retention facilities for national projects."
+      },
+      {
+        "title": "Airports",
+        "desc": "Development and construction of airport infrastructure, including runways and passenger terminals."
+      },
+      {
+        "title": "Oil Field Services",
+        "desc": "Providing technical and engineering support for the extraction and development operations of oil fields."
+      },
+      {
+        "title": "Electromechanical and Electrical Works",
+        "desc": "Installation and equipment of electromechanical and electrical systems for buildings and facilities."
+      },
+      {
+        "title": "Towers and Commercial Centers",
+        "desc": "Constructing residential towers and commercial centers with modern and sustainable designs."
+      },
+      {
+        "title": "Tourist Resorts",
+        "desc": "Establishing and developing luxurious tourist resorts that meet the highest international standards."
+      },
+      {
+        "title": "Sports Stadiums",
+        "desc": "Building and equipping integrated stadiums and sports facilities for various events."
+      },
+      {
+        "title": "Metal Structures",
+        "desc": "Design and execution of strong industrial and commercial metal structures."
+      }
+    ]
   },
   "ProjectsPage": {
     "title": "Our Portfolio",
